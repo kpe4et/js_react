@@ -23,8 +23,7 @@ ReactDom.render(
     function sendMessage() {
         let text = document.getElementById("messageSender").value;
         messageArr.push(text);
-        let where = document.getElementById("messenger");
-        console.log(where.childElementCount);
+        let destination = document.getElementById("messenger");
         let renderMessages = messageArr.map(el => <div >{ el }</div>);
-        ReactDom.render( <div>{ renderMessages }</div>, where);
+        ReactDom.render( <div>{ renderMessages }</div>, destination);
     }
